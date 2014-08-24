@@ -1,10 +1,17 @@
+##########################################
+# This script transforms the raw UCI HAR Dataset into a 'tidy' dataset
+##########################################
+
+# change this to where you have stored the UCI Dataset
+setwd('/home/hduser/workspace/getting-cleaning-data-course-project/')
+
 # libs
 library(data.table)
 
 ### STEP 1 - Merge the training and the test sets to create one data set #######
 
-directory <- "/home/hduser/workspace/getting-cleaning-data-course-project/UCI HAR Dataset"
-tidy_dir <- "/home/hduser/workspace/getting-cleaning-data-course-project/tidy_data"
+directory <- "./UCI HAR Dataset"
+tidy_dir <- "./tidy_data"
 
 
 # this function reads the test and train files and combines them
@@ -31,7 +38,7 @@ y <- mergeHelper(paste0(directory, "/", "test/y_test.txt"),
             paste0(directory, "/", "train/y_train.txt"),
             paste0(tidy_dir, "/", "y.txt"))
 
-# read and merge Z
+# read and merge Subjects
 subj <- mergeHelper(paste0(directory, "/", "test/subject_test.txt"),
             paste0(directory, "/", "train/subject_train.txt"),
             paste0(tidy_dir, "/", "subject.txt"))
@@ -65,7 +72,6 @@ subj <- mergeHelper(paste0(directory, "/", "test/subject_test.txt"),
 
 meanCols <- c(1,2,3,41,42,43,81,82,83,121,122,123,161,162,163,201,214,227,240,253)
 
-# 
 # 4 tBodyAcc-std()-X, 
 # 5 tBodyAcc-std()-Y
 # 6 tBodyAcc-std()-Z
