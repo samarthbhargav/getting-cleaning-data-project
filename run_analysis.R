@@ -1,3 +1,5 @@
+# libs
+library(data.table)
 
 ### STEP 1 - Merge the training and the test sets to create one data set #######
 
@@ -121,6 +123,11 @@ colNames <- read.table('/home/hduser/workspace/getting-cleaning-data-course-proj
 
 colnames(x) <- colNames$V2
 colnames(subj) <- c("Subject")
+### Step 5 Creates a second, independent tidy data set with the average of each variable for each activity and each subject
+# Combine
 combined <- cbind(subj, y, x)
-
-write.table(combined, paste0(tidy_dir, "/", "combined.txt"), row.names = F, col.names = T)
+# convert to table, 
+comTable <- data.table(combined)
+result <- comTable[,lapply(.SD,mean),by=c("Activity", "Subject")]
+write.table(combined, paste0(tidy_dir, "/", "combined.csv"), row.names = F, col.names = T, sep=",")
+write.table(result, paste0(tidy_dir, "/", "result.csv"), row.names = F, col.names = T, sep=",")
