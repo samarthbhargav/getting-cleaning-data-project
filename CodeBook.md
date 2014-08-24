@@ -56,47 +56,48 @@ tBodyGyroMean
 tBodyGyroJerkMean
 
 List of features in combined.csv: (Add 2 to get column number in combined.csv)
-Column Variable Name
-3	tBodyAcc-mean()-X
-4	tBodyAcc-mean()-Y
-5	tBodyAcc-mean()-Z
-6	tGravityAcc-mean()-X
-7	tGravityAcc-mean()-Y
-8	tGravityAcc-mean()-Z
-9	tBodyAccJerk-mean()-X
-10	tBodyAccJerk-mean()-Y
-11	tBodyAccJerk-mean()-Z
-12	tBodyGyro-mean()-X
-13	tBodyGyro-mean()-Y
-14	tBodyGyro-mean()-Z
-15	tBodyGyroJerk-mean()-X
-16	tBodyGyroJerk-mean()-Y
-17	tBodyGyroJerk-mean()-Z
-18	tBodyAccMag-mean()
-19	tGravityAccMag-mean()
-20	tBodyAccJerkMag-mean()
-21	tBodyGyroMag-mean()
-22	tBodyGyroJerkMag-mean()
-23	tBodyAcc-std()-X,
-24	tBodyAcc-std()-Y
-25	tBodyAcc-std()-Z
-26	tGravityAcc-std()-X
-27	tGravityAcc-std()-Y
-28	tGravityAcc-std()-Z
-29	tBodyAccJerk-std()-X
-30	tBodyAccJerk-std()-Y
-31	tBodyAccJerk-std()-Z
-32	tBodyGyro-std()-X
-33	tBodyGyro-std()-Y
-34	tBodyGyro-std()-Z
-35	tBodyGyroJerk-std()-X
-36	tBodyGyroJerk-std()-Y
-37	tBodyGyroJerk-std()-Z
-38	tBodyAccMag-std()
-39	tGravityAccMag-std()
-40	tBodyAccJerkMag-std()
-41	tBodyGyroMag-std()
-42	tBodyGyroJerkMag-std()
+	Column	Variable Name
+*	3	tBodyAcc-mean()-X
+*	4	tBodyAcc-mean()-Y
+*	5	tBodyAcc-mean()-Z
+*	6	tGravityAcc-mean()-X
+*	7	tGravityAcc-mean()-Y
+*	8	tGravityAcc-mean()-Z
+*	9	tBodyAccJerk-mean()-X
+*	10	tBodyAccJerk-mean()-Y
+*	11	tBodyAccJerk-mean()-Z
+*	12	tBodyGyro-mean()-X
+*	13	tBodyGyro-mean()-Y
+*	14	tBodyGyro-mean()-Z
+*	15	tBodyGyroJerk-mean()-X
+*	16	tBodyGyroJerk-mean()-Y
+*	17	tBodyGyroJerk-mean()-Z
+*	18	tBodyAccMag-mean()
+*	19	tGravityAccMag-mean()
+*	20	tBodyAccJerkMag-mean()
+*	21	tBodyGyroMag-mean()
+*	22	tBodyGyroJerkMag-mean()
+*	23	tBodyAcc-std()-X,
+*	24	tBodyAcc-std()-Y
+*	25	tBodyAcc-std()-Z
+*	26	tGravityAcc-std()-X
+*	27	tGravityAcc-std()-Y
+*	28	tGravityAcc-std()-Z
+*	29	tBodyAccJerk-std()-X
+*	30	tBodyAccJerk-std()-Y
+*	31	tBodyAccJerk-std()-Z
+*	32	tBodyGyro-std()-X
+*	33	tBodyGyro-std()-Y
+*	34	tBodyGyro-std()-Z
+*	35	tBodyGyroJerk-std()-X
+*	36	tBodyGyroJerk-std()-Y
+*	37	tBodyGyroJerk-std()-Z
+*	38	tBodyAccMag-std()
+*	39	tGravityAccMag-std()
+*	40	tBodyAccJerkMag-std()
+*	41	tBodyGyroMag-std()
+*	42	tBodyGyroJerkMag-std()
+
 
 
 # result.csv
