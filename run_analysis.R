@@ -12,7 +12,7 @@ library(data.table)
 
 directory <- "./UCI HAR Dataset"
 tidy_dir <- "./tidy_data"
-
+dir.create(tidy_dir, showWarnings = F)
 
 # this function reads the test and train files and combines them
 mergeHelper <- function(testpath, trainpath, dest) {
@@ -94,9 +94,7 @@ meanCols <- c(1,2,3,41,42,43,81,82,83,121,122,123,161,162,163,201,214,227,240,25
 # 254 tBodyGyroJerkMag-std()
 
 stdCols <- c(4,5,6,44,45,46,84,85,86,124,125,126,164,165,166,202,215,228,241,254)
-
-
-xSubset <- x[, c(meanCols, stdCols)]
+# Subset is done later
 
 ### Step 3 Uses descriptive activity names to name the activities in the data set
 for( yDesc in y) {
@@ -128,7 +126,9 @@ colnames(y) <- c("Activity")
 colNames <- read.table('/home/hduser/workspace/getting-cleaning-data-course-project/UCI HAR Dataset/features.txt', colClasses = c('character', 'character'))
 
 colnames(x) <- colNames$V2
+x <- x[, c(meanCols, stdCols)]
 colnames(subj) <- c("Subject")
+
 ### Step 5 Creates a second, independent tidy data set with the average of each variable for each activity and each subject
 # Combine
 combined <- cbind(subj, y, x)
