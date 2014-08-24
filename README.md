@@ -22,6 +22,41 @@ Note that the X part contains only underived fields related to mean and standard
 The other file **result.csv** is the averaged measurements of X over all combinations of Y and Subject.
 
 
-For description of the output variables, read the CodeBook.md in the same directory.
+# Process
 
+**Pseucode**
+
+```
+  method readAndCombine(name):
+    var_train = read train data from /name_train
+    var_test = read test data /name_test
+    var = 'stack' data var_train and var_test
+    return var
+  
+  x = readAndCombine('x')
+  y = readAndCombine('y')
+  subj = readAndCombine('subject')
+  
+  features = read features.txt 
+  assign colnames of x to features
+  
+  subset only the columns of x that are needed
+  
+  for values in y:
+    convert '1' to 'WALKING'
+    convert '2' to 'WALKING_UPSTAIRS'
+    .. so on
+  
+  combined = stack subj, y and x columnwise
+  
+  write combined into combined.csv
+  
+  result = group combined by (y, subj) , apply average to x values
+  
+  write result to result.csv
+  
+    
+```
+
+For description of the output variables, read the CodeBook.md in the same directory.
 
